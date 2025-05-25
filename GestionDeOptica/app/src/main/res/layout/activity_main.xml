@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Óptica"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btn_manage_customers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Clientes"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_manage_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Pedidos"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_manage_inventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Inventario"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_manage_finances"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Deudas e Impuestos"/>
+
+</LinearLayout>
