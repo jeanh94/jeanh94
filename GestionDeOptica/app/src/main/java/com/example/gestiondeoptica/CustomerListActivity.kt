@@ -55,7 +55,7 @@ class CustomerListActivity : AppCompatActivity() {
             if (searchText.isNotEmpty()) {
                 searchCustomerByCedula(searchText)
             } else {
-                Toast.makeText(this, "Ingrese una cédula para buscar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.customer_list_toast_enter_cedula_to_search), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -103,7 +103,7 @@ class CustomerListActivity : AppCompatActivity() {
                 customerAdapter.submitList(listOf(customer))
             } else {
                 customerAdapter.submitList(emptyList())
-                Toast.makeText(this, "Cliente no encontrado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.customer_list_toast_customer_not_found), Toast.LENGTH_SHORT).show()
             }
         }
         currentSearchedCustomerLiveData?.observe(this, searchedCustomerObserver!!)

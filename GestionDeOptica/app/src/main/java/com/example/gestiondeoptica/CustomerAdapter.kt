@@ -53,7 +53,8 @@ class CustomerAdapter : RecyclerView.Adapter<CustomerAdapter.CustomerViewHolder>
 
         fun bind(customer: Customer) {
             tvCustomerName.text = "${customer.apellido}, ${customer.nombre}"
-            tvCustomerCedula.text = "Cédula: ${customer.cedula}"
+            // Ensure context is available, typically from itemView.context
+            tvCustomerCedula.text = itemView.context.getString(R.string.item_customer_cedula_prefix) + customer.cedula
         }
     }
 }

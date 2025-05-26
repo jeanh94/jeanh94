@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@android:drawable/list_selector_background">
+
+    <TextView
+        android:id="@+id/tv_debt_customer_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Cliente: Juan Perez (123456789), Deuda ID: 1" />
+
+    <TextView
+        android:id="@+id/tv_debt_monto_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="Monto Total: $100.00" />
+
+    <TextView
+        android:id="@+id/tv_debt_fecha_creacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="Fecha: 27/10/2023" />
+
+    <TextView
+        android:id="@+id/tv_debt_estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:text="Estado: Pendiente" />
+
+    <TextView
+        android:id="@+id/tv_debt_saldo_pendiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="Saldo Pendiente: $75.00" />
+
+</LinearLayout>

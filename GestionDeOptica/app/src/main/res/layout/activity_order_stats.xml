@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".OrderStatsActivity">
+
+    <TextView
+        android:id="@+id/tv_stats_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/order_stats_main_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tv_stats_total_completed_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        tools:text="@string/order_stats_total_completed_orders_prefix"/>
+
+    <TextView
+        android:id="@+id/tv_stats_vision_sencilla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        tools:text="Visión Sencilla: 0 (0.0%)"/> <!-- tools:text is fine -->
+
+    <TextView
+        android:id="@+id/tv_stats_bifocales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        tools:text="Bifocales: 0 (0.0%)"/> <!-- tools:text is fine -->
+
+    <TextView
+        android:id="@+id/tv_stats_progresivos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        tools:text="Progresivos: 0 (0.0%)"/> <!-- tools:text is fine -->
+
+</LinearLayout>

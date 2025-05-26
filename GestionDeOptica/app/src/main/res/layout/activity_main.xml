@@ -12,7 +12,7 @@
         android:id="@+id/tv_main_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestión de Óptica"
+        android:text="@string/main_title"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center_horizontal"
@@ -22,27 +22,60 @@
         android:id="@+id/btn_manage_customers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestión de Clientes"
+        android:text="@string/main_btn_manage_customers"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btn_manage_orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestión de Pedidos"
+        android:text="@string/main_btn_manage_orders"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btn_manage_inventory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestión de Inventario"
+        android:text="@string/main_btn_manage_inventory"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btn_manage_finances"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestión de Deudas e Impuestos"/>
+        android:text="@string/main_btn_manage_finances"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        android:background="#E8E8E8"> {/* Slightly different background for the summary box */}
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_financial_summary_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_total_pending_debts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/main_total_pending_debts_label_prefix" />
+
+        <TextView
+            android:id="@+id/tv_total_pending_taxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/main_total_pending_taxes_label_prefix" />
+    </LinearLayout>
 
 </LinearLayout>

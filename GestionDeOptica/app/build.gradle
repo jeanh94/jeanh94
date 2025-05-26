@@ -18,9 +18,22 @@ android {
             arg("room.schemaLocation", "$projectDir/schemas")
         }
     }
+    // --- SIMULATION ONLY: Keystore configuration ---
+    signingConfigs {
+        release {
+            // In a real scenario, use a secure way to provide these (e.g., keystore.properties, env vars)
+            storeFile file("gestion_optica_keystore.jks") // Will be created in app module root
+            storePassword "android"
+            keyAlias "optica_alias"
+            keyPassword "android"
+        }
+    }
+    // --- END SIMULATION ONLY ---
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release // Apply the signing configuration
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

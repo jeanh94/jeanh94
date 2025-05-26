@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@android:drawable/list_selector_background">
+
+    <TextView
+        android:id="@+id/tv_tax_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Tipo: IVA (SENIAT)" />
+
+    <TextView
+        android:id="@+id/tv_tax_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="Periodo: 10/2023" />
+
+    <TextView
+        android:id="@+id/tv_tax_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="Monto: $150.00" />
+
+    <TextView
+        android:id="@+id/tv_tax_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:text="Estado: Pendiente" />
+
+</LinearLayout>

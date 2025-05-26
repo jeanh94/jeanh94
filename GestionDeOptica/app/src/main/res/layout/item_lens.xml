@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@android:drawable/list_selector_background">
 
     <TextView
-        android:id="@+id/tv_customer_name"
+        android:id="@+id/tv_lens_classification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:text="Apellido, Nombre"/> <!-- tools:text for preview -->
+        tools:text="Clasificación: Visión Sencilla" />
 
     <TextView
-        android:id="@+id/tv_customer_cedula"
+        android:id="@+id/tv_lens_stock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        tools:text="Cédula: 1234567890"/> <!-- tools:text for preview -->
+        android:textSize="16sp"
+        tools:text="Stock: 50" />
 
 </LinearLayout>

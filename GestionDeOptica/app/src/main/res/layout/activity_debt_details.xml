@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DebtDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_details_debt_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            tools:text="Deuda ID: 1"/>
+
+        <TextView
+            android:id="@+id/tv_details_customer_cedula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            tools:text="Cédula Cliente: 123456789"/>
+
+        <TextView
+            android:id="@+id/tv_details_monto_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            tools:text="Monto Total: $100.00"/>
+
+        <TextView
+            android:id="@+id/tv_details_fecha_creacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            tools:text="Fecha Creación: 27/10/2023"/>
+
+        <TextView
+            android:id="@+id/tv_details_estado_deuda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="12dp"
+            tools:text="Estado: Pendiente"/>
+
+        <TextView
+            android:id="@+id/tv_details_saldo_pendiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginBottom="16dp"
+            tools:text="SALDO PENDIENTE: $75.00"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial de Abonos:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_debt_payments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:layout_marginBottom="16dp"
+            tools:listitem="@layout/item_debt_payment"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Nuevo Abono:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_abono_monto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Monto del Abono"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_add_abono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Abono"/>
+
+    </LinearLayout>
+</ScrollView>

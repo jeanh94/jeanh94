@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@android:drawable/list_selector_background">
+
+    <TextView
+        android:id="@+id/tv_formula_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="OD: Esf -1.0 Cil -0.5 Eje 90 ADD +2.0 | OI: Esf -1.5 Cil -0.25 Eje 80 ADD +2.0" />
+
+    <TextView
+        android:id="@+id/tv_formula_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        tools:text="Solicitudes: 5" />
+
+</LinearLayout>

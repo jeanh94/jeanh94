@@ -1,3 +1,295 @@
 <resources>
     <string name="app_name">Gestión de Óptica</string>
+
+    <string-array name="tipo_material_cristal_array">
+        <item>CR</item>
+        <item>AR</item>
+        <item>AB</item>
+        <item>Fotocromático</item>
+        <item>Fotocromático AR</item>
+        <item>Fotocromático AB</item>
+    </string-array>
+
+    <string-array name="clasificacion_pedido_array">
+        <item>Visión Sencilla</item>
+        <item>Bifocales</item>
+        <item>Progresivos</item>
+    </string-array>
+
+    <string-array name="estado_pedido_array">
+        <item>Pendiente</item>
+        <item>Completado</item>
+    </string-array>
+
+    <string-array name="tipo_montura_array">
+        <item>Pasta</item>
+        <item>Metal</item>
+        <item>Niños</item>
+        <item>Lentes de sol</item>
+    </string-array>
+
+    <string-array name="tipo_impuesto_array">
+        <item>IVA (SENIAT)</item>
+        <item>IVSS (Seguros)</item>
+        <item>INCES</item>
+        <item>Contadora</item>
+        <item>Alquiler de condominio</item>
+        <item>Alquiler del local</item>
+        <item>Corpoelec (Luz)</item>
+        <item>Otro</item>
+    </string-array>
+
+    <!-- Reusing estado_pedido_array for estado_impuesto_array as values are identical
+    <string-array name="estado_impuesto_array">
+        <item>Pendiente</item>
+        <item>Pagado</item>
+    </string-array>
+    -->
+
+    <!-- Login Screen -->
+    <string name="login_title">Inicio de Sesión</string>
+    <string name="login_username_hint">Usuario (Cédula/ID)</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button_text">Iniciar Sesión</string>
+    <string name="login_credentials_incorrect">Credenciales incorrectas</string>
+
+    <!-- Main Screen -->
+    <string name="main_title">@string/app_name</string> <!-- Reusing app_name -->
+    <string name="main_btn_manage_customers">Gestión de Clientes</string>
+    <string name="main_btn_manage_orders">Gestión de Pedidos</string>
+    <string name="main_btn_manage_inventory">Gestión de Inventario</string>
+    <string name="main_btn_manage_finances">Gestión de Deudas e Impuestos</string>
+    <string name="main_financial_summary_title">Resumen Financiero (Pendientes)</string>
+    <string name="main_total_pending_debts_label_prefix">Total Deudas Clientes Pendientes: </string>
+    <string name="main_total_pending_taxes_label_prefix">Total Impuestos Pendientes: </string>
+    <string name="main_loading_data">Cargando...</string>
+
+    <!-- Add/Edit Customer Screen -->
+    <string name="add_edit_customer_hint_cedula">Cédula</string>
+    <string name="add_edit_customer_hint_nombre">Nombre</string>
+    <string name="add_edit_customer_hint_apellido">Apellido</string>
+    <string name="add_edit_customer_hint_telefono">Teléfono</string>
+    <string name="add_edit_customer_hint_direccion">Dirección</string>
+    <string name="add_edit_customer_label_formula_od">Fórmula Ojo Derecho (OD)</string>
+    <string name="add_edit_customer_hint_od_esfera">Esfera OD</string>
+    <string name="add_edit_customer_hint_od_cilindro">Cilindro OD</string>
+    <string name="add_edit_customer_hint_od_eje">Eje OD</string>
+    <string name="add_edit_customer_hint_od_add">ADD OD</string>
+    <string name="add_edit_customer_label_formula_oi">Fórmula Ojo Izquierdo (OI)</string>
+    <string name="add_edit_customer_hint_oi_esfera">Esfera OI</string>
+    <string name="add_edit_customer_hint_oi_cilindro">Cilindro OI</string>
+    <string name="add_edit_customer_hint_oi_eje">Eje OI</string>
+    <string name="add_edit_customer_hint_oi_add">ADD OI</string>
+    <string name="add_edit_customer_label_purchase_history">Historial de Compras y Prescripciones:</string>
+    <string name="add_edit_customer_btn_view_purchase_history">Ver Historial de Compras</string>
+    <string name="add_edit_customer_btn_save_customer">Guardar Cliente</string>
+    <string name="add_edit_customer_title_edit">Editar Cliente</string>
+    <string name="add_edit_customer_title_add">Agregar Cliente Nuevo</string>
+    <string name="add_edit_customer_toast_history_upcoming">El historial de compras se implementará próximamente.</string>
+    <string name="add_edit_customer_toast_cedula_required">Cédula es obligatoria</string>
+    <string name="add_edit_customer_toast_nombre_required">Nombre es obligatorio</string>
+    <string name="add_edit_customer_toast_apellido_required">Apellido es obligatorio</string>
+    <string name="add_edit_customer_toast_telefono_required">Teléfono es obligatorio</string>
+    <string name="add_edit_customer_toast_direccion_required">Dirección es obligatoria</string>
+    <string name="add_edit_customer_toast_updated">Cliente actualizado</string>
+    <string name="add_edit_customer_toast_cedula_exists">Un cliente con esta cédula ya existe. Actualizando datos.</string>
+    <string name="add_edit_customer_toast_saved">Cliente guardado</string>
+
+    <!-- Customer List Screen -->
+    <string name="customer_list_search_hint">Buscar por Cédula</string>
+    <string name="customer_list_search_button">Buscar</string>
+    <string name="customer_list_show_all_button">Mostrar Todos</string>
+    <string name="customer_list_fab_content_description">Agregar Nuevo Cliente</string>
+    <string name="customer_list_toast_enter_cedula_to_search">Ingrese una cédula para buscar</string>
+    <string name="customer_list_toast_customer_not_found">Cliente no encontrado</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Configuración</string>
+    <string name="settings_logo_section_title">Configuración de Logotipo</string>
+    <string name="settings_logo_preview_content_description">Vista previa del logotipo actual</string>
+    <string name="settings_btn_change_logo">Cambiar Logotipo</string>
+    <string name="settings_password_section_title">Cambiar Contraseña</string>
+    <string name="settings_hint_current_password">Contraseña Actual</string>
+    <string name="settings_hint_new_password">Nueva Contraseña</string>
+    <string name="settings_hint_confirm_new_password">Confirmar Nueva Contraseña</string>
+    <string name="settings_btn_change_password">Cambiar Contraseña</string>
+    <string name="settings_toast_logo_updated">Logotipo actualizado.</string>
+    <string name="settings_toast_logo_error">Error al guardar el logotipo.</string>
+    <string name="settings_toast_current_password_incorrect">Contraseña actual incorrecta</string>
+    <string name="settings_toast_new_password_min_length">Nueva contraseña debe tener al menos 6 caracteres</string>
+    <string name="settings_toast_passwords_do_not_match">Las nuevas contraseñas no coinciden</string>
+    <string name="settings_toast_password_changed_successfully">Contraseña cambiada exitosamente</string>
+
+    <!-- Debt Details Screen (Missed from previous) -->
+    <string name="debt_details_hint_debt_paid">Deuda Pagada</string>
+    <string name="debt_details_hint_payment_amount">Monto del Abono</string>
+
+    <!-- Add/Edit Order Screen -->
+    <string name="add_edit_order_hint_customer_cedula">Cédula del Cliente</string>
+    <string name="add_edit_order_label_crystal_material_type">Tipo de Material del Cristal</string>
+    <string name="add_edit_order_label_order_classification">Clasificación del Pedido</string>
+    <string name="add_edit_order_label_order_date">Fecha del Pedido</string>
+    <string name="add_edit_order_btn_select_date">Seleccionar Fecha</string>
+    <string name="add_edit_order_hint_price">Precio</string>
+    <string name="add_edit_order_label_order_status">Estado del Pedido</string>
+    <string name="add_edit_order_btn_save_order">Guardar Pedido</string>
+    <string name="add_edit_order_title_edit">Editar Pedido</string>
+    <string name="add_edit_order_title_add">Agregar Pedido Nuevo</string>
+    <string name="add_edit_order_toast_select_customer">Por favor, seleccione un cliente.</string>
+    <string name="add_edit_order_error_customer_required">Cliente requerido</string>
+    <string name="add_edit_order_toast_customer_cedula_empty">Cédula del cliente no puede estar vacía.</string>
+    <string name="add_edit_order_error_cedula_required">Cédula requerida</string>
+    <string name="add_edit_order_toast_enter_price">Por favor, ingrese el precio.</string>
+    <string name="add_edit_order_error_price_required">Precio requerido</string>
+    <string name="add_edit_order_toast_invalid_price">Precio inválido.</string>
+    <string name="add_edit_order_error_invalid_price">Precio inválido</string>
+    <string name="add_edit_order_toast_updated">Pedido actualizado</string>
+    <string name="add_edit_order_toast_saved">Pedido guardado</string>
+    <string name="add_edit_order_toast_order_completed_prefix">Pedido </string> <!-- Suffix with ID -->
+    <string name="add_edit_order_toast_order_completed_suffix"> marcado como completado.</string>
+
+    <!-- Order List Screen -->
+    <string name="order_list_filter_prompt">Filtrar por estado</string>
+    <string name="order_list_btn_clear_filter">Limpiar</string>
+    <string name="order_list_fab_content_description">Agregar Nuevo Pedido</string>
+    <string name="order_list_filter_all_orders">Todos</string>
+
+    <!-- Order Stats Screen -->
+    <string name="order_stats_screen_title">Estadísticas de Pedidos</string>
+    <string name="order_stats_main_title">Estadísticas de Pedidos Completados por Categoría</string>
+    <string name="order_stats_total_completed_orders_prefix">Total Pedidos Completados: </string>
+    <string name="order_stats_vision_sencilla_format">Visión Sencilla: %d (%.1f%%)</string>
+    <string name="order_stats_bifocales_format">Bifocales: %d (%.1f%%)</string>
+    <string name="order_stats_progresivos_format">Progresivos: %d (%.1f%%)</string>
+
+    <!-- Add/Edit Frame Screen -->
+    <string name="add_edit_frame_label_frame_type">Tipo de Montura</string>
+    <string name="add_edit_frame_hint_stock_quantity">Cantidad en Stock</string>
+    <string name="add_edit_frame_btn_save_frame">Guardar Montura</string>
+    <string name="add_edit_frame_title_edit">Editar Montura</string>
+    <string name="add_edit_frame_title_add">Agregar Montura Nueva</string>
+    <string name="add_edit_frame_toast_stock_required">Cantidad en stock es requerida</string>
+    <string name="add_edit_frame_error_stock_required">Cantidad requerida</string>
+    <string name="add_edit_frame_toast_stock_invalid">Cantidad en stock inválida</string>
+    <string name="add_edit_frame_error_stock_invalid">Cantidad inválida</string>
+    <string name="add_edit_frame_toast_updated">Montura actualizada</string>
+    <string name="add_edit_frame_toast_saved">Montura guardada</string>
+
+    <!-- Frame Inventory Screen -->
+    <string name="frame_inventory_title">Inventario de Monturas</string>
+    <string name="frame_inventory_fab_content_description">Agregar Nueva Montura</string>
+
+    <!-- Add/Edit Lens Screen -->
+    <string name="add_edit_lens_label_lens_classification">Clasificación del Cristal</string>
+    <string name="add_edit_lens_btn_save_lens">Guardar Cristal</string>
+    <string name="add_edit_lens_title_edit">Editar Cristal</string>
+    <string name="add_edit_lens_title_add">Agregar Cristal Nuevo</string>
+    <string name="add_edit_lens_toast_updated">Cristal actualizado</string>
+    <string name="add_edit_lens_toast_saved">Cristal guardado</string>
+    <!-- Reusing: add_edit_frame_hint_stock_quantity, add_edit_frame_toast_stock_required, add_edit_frame_error_stock_required, add_edit_frame_toast_stock_invalid, add_edit_frame_error_stock_invalid -->
+
+    <!-- Lens Inventory Screen -->
+    <string name="lens_inventory_title">Inventario de Cristales</string>
+    <string name="lens_inventory_fab_content_description">Agregar Nuevo Cristal</string>
+
+    <!-- Inventory Menu Screen -->
+    <string name="inventory_menu_screen_title">Menú de Inventario</string>
+    <string name="inventory_menu_main_title">Gestión de Inventario</string>
+    <string name="inventory_menu_btn_manage_frames">Gestionar Monturas</string>
+    <string name="inventory_menu_btn_manage_lenses">Gestionar Cristales</string>
+
+    <!-- Finances Menu Screen -->
+    <string name="finances_menu_screen_title">Menú Financiero</string>
+    <string name="finances_menu_main_title">Gestión Financiera</string>
+    <string name="finances_menu_btn_manage_customer_debts">Gestionar Deudas de Clientes</string>
+    <string name="finances_menu_btn_manage_monthly_taxes">Gestionar Impuestos Mensuales</string>
+    <string name="finances_menu_btn_view_sales_stats">Ver Estadísticas de Ventas</string>
+
+    <!-- Tax List Screen -->
+    <string name="tax_list_screen_title">Lista de Impuestos Mensuales</string>
+    <string name="tax_list_filter_prompt">Filtrar por estado de impuesto</string>
+    <string name="tax_list_btn_clear_filter">Limpiar</string>
+    <string name="tax_list_fab_content_description">Agregar Nuevo Impuesto</string>
+    <string name="tax_list_filter_all_taxes">Todos</string>
+
+    <!-- Customer Debt List Screen -->
+    <string name="customer_debt_list_screen_title">Lista de Deudas de Clientes</string>
+    <string name="customer_debt_list_fab_content_description">Agregar Nueva Deuda</string>
+
+    <!-- Debt Details Screen (Additional) -->
+    <string name="debt_details_screen_title">Detalles de Deuda y Abonos</string>
+    <string name="debt_details_error_debt_id_not_found">Error: ID de deuda no encontrado.</string>
+    <string name="debt_details_label_debt_id_prefix">Deuda ID: </string>
+    <string name="debt_details_label_customer_cedula_prefix">Cédula Cliente: </string>
+    <string name="debt_details_label_total_amount_prefix">Monto Total: </string>
+    <string name="debt_details_label_creation_date_prefix">Fecha Creación: </string>
+    <string name="debt_details_label_status_prefix">Estado: </string>
+    <string name="debt_details_label_pending_balance_prefix">SALDO PENDIENTE: </string>
+    <string name="debt_details_toast_enter_payment_amount">Ingrese el monto del abono.</string>
+    <string name="debt_details_error_payment_amount_required">Monto requerido</string>
+    <string name="debt_details_toast_invalid_payment_amount">Monto del abono inválido.</string>
+    <string name="debt_details_error_invalid_payment_amount">Monto inválido</string>
+    <string name="debt_details_toast_payment_exceeds_balance">El abono excede el saldo pendiente.</string>
+    <string name="debt_details_error_payment_exceeds_balance">Excede saldo</string>
+    <string name="debt_details_toast_payment_registered">Abono registrado.</string>
+    <string name="debt_details_toast_error_loading_debt">Error: No se pudo cargar la deuda.</string>
+
+    <!-- Add/Edit Debt Screen -->
+    <string name="add_edit_debt_hint_total_amount">Monto Total de la Deuda</string>
+    <string name="add_edit_debt_btn_save_debt">Guardar Deuda</string>
+    <string name="add_edit_debt_title_edit">Editar Deuda</string>
+    <string name="add_edit_debt_title_add">Agregar Deuda Nueva</string>
+    <string name="add_edit_debt_toast_select_valid_customer">Por favor, seleccione un cliente válido.</string>
+    <string name="add_edit_debt_toast_total_amount_required">Monto total es requerido</string>
+    <string name="add_edit_debt_error_total_amount_required">Monto requerido</string>
+    <string name="add_edit_debt_toast_total_amount_invalid">Monto total inválido</string>
+    <string name="add_edit_debt_error_total_amount_invalid">Monto inválido</string>
+    <string name="add_edit_debt_toast_updated">Deuda actualizada</string>
+    <string name="add_edit_debt_toast_saved">Deuda guardada</string>
+    <!-- Reusing: add_edit_order_hint_customer_cedula, add_edit_order_error_customer_required -->
+
+    <!-- Item Order -->
+    <string name="item_order_customer_prefix">Cliente: </string>
+    <string name="item_order_date_prefix">Fecha: </string>
+    <string name="item_order_material_prefix">Material: </string>
+    <string name="item_order_classification_prefix">Clasificación: </string>
+    <string name="item_order_price_prefix">Precio: $</string> <!-- Note: $ is included here -->
+    <string name="item_order_status_prefix">Estado: </string>
+
+    <!-- Item Frame -->
+    <string name="item_frame_type_prefix">Tipo: </string>
+    <string name="item_frame_stock_prefix">Stock: </string>
+
+    <!-- Item Lens -->
+    <string name="item_lens_classification_prefix">Clasificación: </string>
+    <!-- Reusing item_frame_stock_prefix for lens stock -->
+
+    <!-- Item Customer Debt -->
+    <string name="item_customer_debt_customer_prefix">Cliente: </string>
+    <string name="item_customer_debt_debt_id_middle">, Deuda ID: </string>
+    <string name="item_customer_debt_total_amount_prefix">Monto Total: $</string>
+    <string name="item_customer_debt_creation_date_prefix">Fecha: </string>
+    <string name="item_customer_debt_status_prefix">Estado: </string>
+    <string name="item_customer_debt_pending_balance_prefix">Saldo Pendiente: $</string>
+
+    <!-- Item Debt Payment -->
+    <string name="item_debt_payment_date_prefix">Fecha Abono: </string>
+    <string name="item_debt_payment_amount_prefix">Monto: $</string>
+
+    <!-- Item Tax -->
+    <string name="item_tax_type_prefix">Tipo: </string>
+    <string name="item_tax_period_prefix">Periodo: </string>
+    <string name="item_tax_amount_prefix">Monto: $</string>
+    <string name="item_tax_status_prefix">Estado: </string>
+
+    <!-- Item Formula Stat -->
+    <string name="item_formula_od_prefix">OD: </string>
+    <string name="item_formula_oi_prefix">OI: </string>
+    <string name="item_formula_esf_prefix">Esf </string>
+    <string name="item_formula_cil_prefix">Cil </string>
+    <string name="item_formula_eje_prefix">Eje </string>
+    <string name="item_formula_add_prefix">ADD </string>
+    <string name="item_formula_separator"> | </string>
+    <string name="item_formula_requests_prefix">Solicitudes: </string>
+    <string name="item_formula_na">N/A</string>
 </resources>

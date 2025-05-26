@@ -27,6 +27,38 @@
             android:name=".AddEditCustomerActivity" />
         <activity
             android:name=".CustomerListActivity" />
+        <activity
+            android:name=".AddEditOrderActivity" />
+        <activity
+            android:name=".OrderListActivity" />
+        <activity
+            android:name=".OrderStatsActivity" />
+        <activity
+            android:name=".AddEditFrameActivity" />
+        <activity
+            android:name=".FrameInventoryActivity" />
+        <activity
+            android:name=".AddEditLensActivity" />
+        <activity
+            android:name=".LensInventoryActivity" />
+        <activity
+            android:name=".InventoryMenuActivity" />
+        <activity
+            android:name=".AddEditDebtActivity" />
+        <activity
+            android:name=".DebtDetailsActivity" />
+        <activity
+            android:name=".CustomerDebtListActivity" />
+        <activity
+            android:name=".FinancesMenuActivity" />
+        <activity
+            android:name=".AddEditTaxActivity" />
+        <activity
+            android:name=".TaxListActivity" />
+        <activity
+            android:name=".SettingsActivity" />
+        <activity
+            android:name=".SalesStatsActivity" />
     </application>
 
 </manifest>

@@ -10,7 +10,7 @@
         android:id="@+id/et_search_cedula"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Buscar por Cédula"
+        android:hint="@string/customer_list_search_hint"
         android:inputType="text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         android:id="@+id/btn_search_customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar"
+        android:text="@string/customer_list_search_button"
         app:layout_constraintTop_toTopOf="@id/et_search_cedula"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="8dp"/>
@@ -30,7 +30,7 @@
         android:id="@+id/btn_show_all_customers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Mostrar Todos"
+        android:text="@string/customer_list_show_all_button"
         app:layout_constraintTop_toBottomOf="@id/et_search_cedula"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,6 +57,6 @@
         android:src="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="Agregar Nuevo Cliente" />
+        android:contentDescription="@string/customer_list_fab_content_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

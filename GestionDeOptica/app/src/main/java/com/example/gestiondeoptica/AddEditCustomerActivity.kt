@@ -61,7 +61,7 @@ class AddEditCustomerActivity : AppCompatActivity() {
 
         if (intent.hasExtra(EXTRA_CUSTOMER_CEDULA)) {
             currentCustomerCedula = intent.getStringExtra(EXTRA_CUSTOMER_CEDULA)
-            title = "Editar Cliente" // Change activity title
+            title = getString(R.string.add_edit_customer_title_edit) // Change activity title
             etCedula.isFocusable = false
             etCedula.isClickable = false
             btnViewPurchaseHistory.visibility = android.view.View.VISIBLE // Show button in edit mode
@@ -77,7 +77,7 @@ class AddEditCustomerActivity : AppCompatActivity() {
                 }
             }
         } else {
-            title = "Agregar Cliente Nuevo" // Change activity title
+            title = getString(R.string.add_edit_customer_title_add) // Change activity title
             btnViewPurchaseHistory.visibility = android.view.View.GONE // Hide button in add mode
         }
 
@@ -86,7 +86,7 @@ class AddEditCustomerActivity : AppCompatActivity() {
         }
 
         btnViewPurchaseHistory.setOnClickListener { // Added
-            Toast.makeText(this, "El historial de compras se implementará próximamente.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.add_edit_customer_toast_history_upcoming), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -114,28 +114,28 @@ class AddEditCustomerActivity : AppCompatActivity() {
         val direccion = etDireccion.text.toString().trim()
 
         if (cedula.isEmpty()) {
-            Toast.makeText(this, "Cédula es obligatoria", Toast.LENGTH_SHORT).show()
-            etCedula.error = "Cédula es obligatoria"
+            Toast.makeText(this, getString(R.string.add_edit_customer_toast_cedula_required), Toast.LENGTH_SHORT).show()
+            etCedula.error = getString(R.string.add_edit_customer_toast_cedula_required)
             return
         }
         if (nombre.isEmpty()) {
-            Toast.makeText(this, "Nombre es obligatorio", Toast.LENGTH_SHORT).show()
-            etNombre.error = "Nombre es obligatorio"
+            Toast.makeText(this, getString(R.string.add_edit_customer_toast_nombre_required), Toast.LENGTH_SHORT).show()
+            etNombre.error = getString(R.string.add_edit_customer_toast_nombre_required)
             return
         }
         if (apellido.isEmpty()) {
-            Toast.makeText(this, "Apellido es obligatorio", Toast.LENGTH_SHORT).show()
-            etApellido.error = "Apellido es obligatorio"
+            Toast.makeText(this, getString(R.string.add_edit_customer_toast_apellido_required), Toast.LENGTH_SHORT).show()
+            etApellido.error = getString(R.string.add_edit_customer_toast_apellido_required)
             return
         }
          if (telefono.isEmpty()) {
-            Toast.makeText(this, "Teléfono es obligatorio", Toast.LENGTH_SHORT).show()
-            etTelefono.error = "Teléfono es obligatorio"
+            Toast.makeText(this, getString(R.string.add_edit_customer_toast_telefono_required), Toast.LENGTH_SHORT).show()
+            etTelefono.error = getString(R.string.add_edit_customer_toast_telefono_required)
             return
         }
         if (direccion.isEmpty()) {
-            Toast.makeText(this, "Dirección es obligatoria", Toast.LENGTH_SHORT).show()
-            etDireccion.error = "Dirección es obligatoria"
+            Toast.makeText(this, getString(R.string.add_edit_customer_toast_direccion_required), Toast.LENGTH_SHORT).show()
+            etDireccion.error = getString(R.string.add_edit_customer_toast_direccion_required)
             return
         }
 
@@ -159,16 +159,16 @@ class AddEditCustomerActivity : AppCompatActivity() {
         lifecycleScope.launch {
             if (currentCustomerCedula != null) { // Edit mode
                 customerDao.updateCustomer(customer)
-                Toast.makeText(this@AddEditCustomerActivity, "Cliente actualizado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@AddEditCustomerActivity, getString(R.string.add_edit_customer_toast_updated), Toast.LENGTH_SHORT).show()
             } else { // Add mode
                 // Check if customer with this cedula already exists, even though we use REPLACE
                 // It's good UX to inform the user.
                 val existingCustomer = customerDao.getCustomerByCedula(cedula).value // This might need to be observed or run in a different way if not directly accessible
                 if (existingCustomer != null) {
-                     Toast.makeText(this@AddEditCustomerActivity, "Un cliente con esta cédula ya existe. Actualizando datos.", Toast.LENGTH_LONG).show()
+                     Toast.makeText(this@AddEditCustomerActivity, getString(R.string.add_edit_customer_toast_cedula_exists), Toast.LENGTH_LONG).show()
                 }
                 customerDao.insertCustomer(customer) // Due to OnConflictStrategy.REPLACE, this will update if exists
-                Toast.makeText(this@AddEditCustomerActivity, "Cliente guardado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@AddEditCustomerActivity, getString(R.string.add_edit_customer_toast_saved), Toast.LENGTH_SHORT).show()
             }
             finish()
         }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".InventoryMenuActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inventory_menu_main_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btn_menu_manage_frames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inventory_menu_btn_manage_frames"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_menu_manage_lenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inventory_menu_btn_manage_lenses"/>
+
+</LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddEditCustomerActivity">
+    tools:context=".AddEditOrderActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,44 +12,84 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <EditText
-            android:id="@+id/et_cedula"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/actv_customer_cedula_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/add_edit_customer_hint_cedula"
-            android:inputType="text"
+            android:hint="@string/add_edit_order_hint_customer_cedula"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_marginBottom="8dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_customer_cedula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_edit_order_label_crystal_material_type"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:id="@+id/spinner_tipo_material_cristal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"/>
 
-        <EditText
-            android:id="@+id/et_nombre"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_edit_order_label_order_classification"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:id="@+id/spinner_clasificacion_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/add_edit_customer_hint_nombre"
-            android:inputType="textPersonName"
             android:layout_marginBottom="8dp"/>
 
-        <EditText
-            android:id="@+id/et_apellido"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_edit_order_label_order_date"
+            android:layout_marginTop="8dp"/>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/add_edit_customer_hint_apellido"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="8dp"/>
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <Button
+                android:id="@+id/btn_fecha_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_edit_order_btn_select_date"/>
+            <TextView
+                android:id="@+id/tv_selected_fecha_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                tools:text="2023-10-27"/>
+        </LinearLayout>
 
         <EditText
-            android:id="@+id/et_telefono"
+            android:id="@+id/et_precio_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/add_edit_customer_hint_telefono"
-            android:inputType="phone"
+            android:hint="@string/add_edit_order_hint_price"
+            android:inputType="numberDecimal"
             android:layout_marginBottom="8dp"/>
 
-        <EditText
-            android:id="@+id/et_direccion"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_edit_order_label_order_status"
+            android:layout_marginTop="8dp"/>
+        <Spinner
+            android:id="@+id/spinner_estado_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/add_edit_customer_hint_direccion"
-            android:inputType="textPostalAddress"
             android:layout_marginBottom="16dp"/>
 
         <TextView
@@ -61,7 +101,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_od_esfera"
+            android:id="@+id/et_od_esfera_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_od_esfera"
@@ -69,7 +109,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_od_cilindro"
+            android:id="@+id/et_od_cilindro_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_od_cilindro"
@@ -77,7 +117,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_od_eje"
+            android:id="@+id/et_od_eje_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_od_eje"
@@ -85,7 +125,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_od_add"
+            android:id="@+id/et_od_add_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_od_add"
@@ -101,7 +141,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_oi_esfera"
+            android:id="@+id/et_oi_esfera_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_oi_esfera"
@@ -109,7 +149,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_oi_cilindro"
+            android:id="@+id/et_oi_cilindro_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_oi_cilindro"
@@ -117,7 +157,7 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_oi_eje"
+            android:id="@+id/et_oi_eje_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_oi_eje"
@@ -125,34 +165,18 @@
             android:layout_marginBottom="8dp"/>
 
         <EditText
-            android:id="@+id/et_oi_add"
+            android:id="@+id/et_oi_add_pedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_edit_customer_hint_oi_add"
             android:inputType="text"
             android:layout_marginBottom="16dp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_edit_customer_label_purchase_history"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"/>
-
         <Button
-            android:id="@+id/btn_view_purchase_history"
+            android:id="@+id/btn_save_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_edit_customer_btn_view_purchase_history"
-            android:layout_marginBottom="16dp"/>
-
-        <Button
-            android:id="@+id/btn_save_customer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_edit_customer_btn_save_customer"/>
+            android:text="@string/add_edit_order_btn_save_order"/>
 
     </LinearLayout>
 </ScrollView>
